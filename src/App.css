@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+
+.control-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 250px;
+  background: #fff;
+  border-radius: 4px;
+  opacity: 0.85;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+  margin: 20px;
+  font-size: 13px;
+  line-height: 2;
+  color: #6b6b76;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.labelLayer {
+  font-weight: bold;
+  flex-grow: 2;
+  margin-right: 30px;
+}
+
+.inputLayer {
+  display: flex;
+  margin-bottom: 1em;
+  /* align-items: center;
+  justify-content: space-evenly;
+  width: 100%; */
+}

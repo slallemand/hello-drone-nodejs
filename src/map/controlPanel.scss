@@ -1,0 +1,31 @@
+.controlPanel {
+    &__container {
+        h4 {
+            margin-bottom: 0.5em;
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+}
+
+.legend {
+    padding: 5px;
+    
+    &--blue {
+        font-weight: 800;
+        color: #3c94d3;
+        border: 2px dashed #3c94d3;
+    } 
+    
+    &--yellow {
+        font-weight: 800;
+        color: #edce78;
+        border: 2px dashed #edce78;
+    }
+
+    &--orange {
+        font-weight: 800;
+        color: #e8712c;
+        border: 2px dashed #e8712c;
+    }
+}

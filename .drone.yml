@@ -1,0 +1,28 @@
+---
+kind: pipeline
+name: frontend
+
+node:
+  memory: high
+
+steps:
+## FRONTEND ###
+- name: FE - INSTALL DEPENDENCIES (node:8) - DEV
+  image: node:8
+  commands:
+  - npm install node-sass
+  - npm install  
+
+- name: FE - BUILD (node:8) - DEV
+  image: node:8
+  environment:
+    CI: false
+    REACT_APP_MAPBOX_TOKEN:
+      from_secret: mapbox_token
+    REACT_APP_MAPBOX_STYLE:
+      from_secret: mapbox_style
+    REACT_APP_DEFAULT_EVENT_FOCUS:
+      from_secret: default_event_focus
+  commands:
+  - unset CI
+  - npm run build
