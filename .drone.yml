@@ -6,22 +6,12 @@ name: frontend
 
 steps:
 ## FRONTEND ###
-- name: FE - INSTALL DEPENDENCIES (node:8) - DEV
-  image: node:8
+- name: hello
+  image: alpine
   commands:
-  - npm install node-sass
-  - npm install  
+  - echo hello
 
-- name: FE - BUILD (node:8) - DEV
-  image: node:8
-  environment:
-    CI: false
-    REACT_APP_MAPBOX_TOKEN:
-      from_secret: mapbox_token
-    REACT_APP_MAPBOX_STYLE:
-      from_secret: mapbox_style
-    REACT_APP_DEFAULT_EVENT_FOCUS:
-      from_secret: default_event_focus
+- name: bonjour
+  image: alpine
   commands:
-  - unset CI
-  - npm run build
+  - echo bonjour
