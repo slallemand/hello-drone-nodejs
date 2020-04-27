@@ -4,10 +4,6 @@ type: kubernetes
 name: frontend
 
 
-
-node:
-  memory: high
-
 steps:
 ## FRONTEND ###
 - name: FE - INSTALL DEPENDENCIES (node:8) - DEV
