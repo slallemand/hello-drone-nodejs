@@ -3,10 +3,17 @@ kind: pipeline
 type: kubernetes
 name: frontend
 
-# plop
+trigger:
+  branch:
+    - master
+    - release/*
+    - develop
+  event:
+    - push
+    - pull_request
+    - tag
 
 steps:
-## FRONTEND ###
 - name: hello
   image: alpine
   commands:
